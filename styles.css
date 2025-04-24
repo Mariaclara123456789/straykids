@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+:root {
+    --vermelho-skz: #f13737;
+    --preto-skz: #111;
+    --branco-skz: #f9f9f9;
+    --alto-contraste-fundo: #000000;
+    --alto-contraste-texto: #ffffff;
+    --alto-contraste-link: #d81212;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--branco-skz);
+    color: var(--preto-skz);
+}
+
+header {
+    background-color: var(--vermelho-skz);
+}
+
+.nav-link {
+    color: var(--branco-skz);
+    font-weight: 600;
+}
+
+.inicio-fundo {
+    position: relative;
+    border-radius: 40px;
+    width: 100%;
+    height: 606px;
+    padding: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.inicio-fundo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/skz-background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    border-radius: 40px;
+}
+
+.inicio-fundo > * {
+    position: relative;
+    z-index: 1;
+}
+
+.img-inicio {
+    position: absolute;
+    right: 0;
+    top: 15rem;
+    width: 45rem;
+    height: auto;
+    z-index: 2;
+}
+
+.esquerda-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.botao-inicio {
+    background-color: var(--preto-skz);
+    color: var(--branco-skz);
+    border-radius: 30px;
+    border: none;
+    width: 14em;
+    height: 3em;
+    align-content: center;
+}
+
+.opcoes-acessibilidade button{
+    background-color: var(--preto-skz);
+    border-color: var(--preto-skz);
+}
+
+.menu-acessibilidade button{
+    background-color: var(--preto-skz);
+    border-color: var(--preto-skz);
+}
+
+.display-4 {
+    text-shadow: 2px 2px var(--vermelho-skz);
+}
+
+#sobre {
+    background: linear-gradient(to right, #fff, #ffe6e6);
+    padding-top: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-family: 'Lemon', serif;
+    font-size: 2.5em;
+    color: var(--vermelho-skz);
+}
+
+#galeria {
+    background-color: #fff0f0;
+}
+
+
+#contato {
+    background: url('img/skz-decor.png') center no-repeat;
+    background-size: 100% 100%;
+    border-radius: 10%;
+    background-color: #f8f8f8;
+    padding: 4rem 0;
+}
+
+.formulario {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+.formulario button {
+    background-color: var(--vermelho-skz);
+    border: none;
+    font-weight: bold;
+}
+
+.form-control {
+    background-color: #f1f1f1;
+}
+
+.menu-acessibilidade {
+    position: fixed;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+}
+
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+.opcoes-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
+}
+
+.apresenta-lista {
+    display: none;
+}
+
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link {
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary {
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo);
+}
+
+.alto-contraste #sobre,
+.alto-contraste #galeria {
+    background: none;
+}
+
+.alto-contraste .fundo-galeria {
+    background: none;
+}
+
+#integrantes {
+    padding: 5rem 0;
+}
+
+#integrantes .card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#integrantes .card:hover {
+    transform: translateY(-5px);
+}
+
+#integrantes .card-img-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 300px;
+    object-fit: cover;
+}
